@@ -38,6 +38,22 @@ app.listen(3000, function(){
 });
 
 /*
+** Sending a response
+
+- In the Hello World example we used the Response.send() method to send a simple string as a response, and to close the connection:
+    (req, res) => res.send('Hello World!')
+- If you pass in a string, it sets the Content-Type header to text/html.
+- if you pass in an object or an array, it sets the application/json Content-Type header, and parses that parameter into JSON.
+- send() automatically sets the Content-Length HTTP response header.
+- send() also automatically closes the connection.
+
+** Send a JSON response
+
+- The Response.json() method accepts an object or array, and converts it to JSON before sending it:
+- res.json({ username: 'Flavio' })
+
+
+
 Run the Application:
 >node index.js
 */
