@@ -4,6 +4,8 @@
     >npm i express
 */
 // Express is a Node.js Web Framework.
+
+// First import the express package to the express value
 var express = require("express");
 
 // Instantiate an application by calling the express() method.
@@ -36,6 +38,12 @@ the body of the request, and more.
 - Response is the HTTP response object that we’ll send to the client.
 - What we do in this callback is to send the ‘Hello World!’ string to the client, using the Response.send() method.
 -This method sets that string as the body, and it closes the connection.
+-----------------------------------
+Declareing route by url like /api/products/101 where 101 is mapped into the req object object as:
+
+router.get('/api/products/:id', function (req, res) {
+  console.log("choice id is " +r eq.params.id);
+});
 */
 
 app.listen(3000, function(){
